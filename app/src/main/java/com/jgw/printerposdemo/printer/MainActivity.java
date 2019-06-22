@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 		dialog = new ProgressDialog(this);
 		dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		dialog.setCancelable(false);
-		checkUpdate();
+//		checkUpdate();
 		// TODO
 		// fu = new FileUtils();
 		// fu.createFile(this);// 向SD卡上写入打印文件
@@ -351,7 +351,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 					}
 
 					handler.sendMessage(mes);
-					Log.i(TAG, "mes:" + mes);
+					//Log.i(TAG, "mes:" + mes);
 				}
 
 			};

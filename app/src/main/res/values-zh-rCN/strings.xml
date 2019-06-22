@@ -2,7 +2,7 @@
 <resources>
     <string name="title_activity_pdf_print">PdfPrintActivity</string>
     <string name="title_activity_lable_print">LablePrintActivity</string>
-    <string name="app_name">AndroidPrintDemo</string>
+    <string name="app_name">POSPrintDemo</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_setting">SettingActivity</string>

@@ -1,13 +1,6 @@
 package com.jgw.printerposdemo.printer;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.Vector;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.media.AudioManager;
@@ -30,12 +23,16 @@ import android.widget.Toast;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.jgw.printerposdemo.R;
-import com.jgw.printerposdemo.printer.global.GlobalContants;
-import com.jgw.printerposdemo.printer.utils.PrefUtils;
-import com.jgw.printerposdemo.zxing.camera.CameraManager;
-import com.jgw.printerposdemo.zxing.decoding.CaptureActivityHandler;
-import com.jgw.printerposdemo.zxing.decoding.InactivityTimer;
-import com.jgw.printerposdemo.zxing.view.ViewfinderView;
+import com.zxn.zxing.camera.CameraManager;
+import com.zxn.zxing.decoding.CaptureActivityHandler;
+import com.zxn.zxing.decoding.InactivityTimer;
+import com.zxn.zxing.view.ViewfinderView;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Initial the camera
@@ -164,7 +161,7 @@ public class MipcaActivityCapture extends Activity implements Callback {
 				} else {
 					CODE_TYPE = 1;
 				}
-				Log.e("---> (1一维码、  2、二维码    3、其他码) ", "" + CODE_TYPE);
+				Log.e("(1一维码、2、二维码3、其他码) ", "" + CODE_TYPE);
 
 				// Intent intent = new Intent();
 				// intent.setAction("android.intent.action.VIEW");
@@ -245,8 +242,8 @@ public class MipcaActivityCapture extends Activity implements Callback {
 			return;
 		}
 		if (handler == null) {
-			handler = new CaptureActivityHandler(this, decodeFormats,
-					characterSet);
+//			handler = new CaptureActivityHandler(this, decodeFormats,
+//					characterSet,null);
 		}
 	}
 

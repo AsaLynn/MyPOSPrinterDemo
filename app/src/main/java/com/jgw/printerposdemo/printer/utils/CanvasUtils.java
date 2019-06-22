@@ -90,8 +90,6 @@ public class CanvasUtils {
 	 * 
 	 * @param resources
 	 * @param mPrinter
-	 * @param isStylus
-	 * @param is58mm
 	 */
 	public void printCustomImage2(Resources resources, PrinterInstance mPrinter) {
 		// 创建画布
@@ -295,8 +293,10 @@ public class CanvasUtils {
 	public static Bitmap createBitmapQR_CODE(String str, int param1, int param2) {
 		try {
 			BitMatrix matrix = new MultiFormatWriter().encode(str, BarcodeFormat.QR_CODE, param1, param2);
-			int width = matrix.width;
-			int height = matrix.height;
+//			int width = matrix.width;
+//			int height = matrix.height;
+			int width = matrix.getWidth();
+			int height = matrix.getHeight();
 			int[] pixels = new int[width * height];
 			for (int y = 0; y < height; ++y) {
 				for (int x = 0; x < width; ++x) {
